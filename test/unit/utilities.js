@@ -30,6 +30,7 @@ describe('the todo.util methods', function () {
     it('should trim a name', function () {
       var todoName = 'Trim trees      ';
       var trimmed = todo.util.trimTodoName(todoName);
+      expect(trimmed).to.have.length(10);
       expect(trimmed).to.be.equal('Trim trees');
     });
 
